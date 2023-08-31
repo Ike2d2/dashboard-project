@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/ee28ea19aa.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
+
 <body>
     <div id="shell">
         <div id="sidebar">
@@ -15,19 +20,25 @@
             </div>
             <nav id="sideNav">
                 <a class="sideItem">
-                    <i></i>
+                    <div class="shellIcon">
+                        <i>bars</i>
+                    </div>
                     <span>RATE</span>
                 </a>
                 <a class="sideItem">
-                    <i></i>
+                    <div class="shellIcon">
+                        <i>star</i>
+                    </div>
                     <span>OVERVIEW</span>
                 </a>
                 <a class="sideItem">
-                    <i></i>
+                    <div class="shellIcon">
+                        <i>chat</i>
+                    </div>
                     <span>REPORTS</span>
                 </a>
                 <a class="sideItem">
-                    <i></i>
+                    <i>gear</i>
                     <span>SETTINGS</span>
                 </a>
             </nav>
@@ -38,7 +49,7 @@
         <div id="mainWrapper">
             <header>
                 <a id="back">
-                    <i></i>
+                    <i>left_arrow</i>
                     <span>Back</span>
                 </a>
                 <nav id="headerNav">
@@ -48,17 +59,163 @@
                 </nav>
                 <div id="members">
                     <div id="memberImgs">
-                        <img>
-                        <img>
-                        <img>
+                        <img alt="member">
+                        <img alt="member">
+                        <img alt="member">
                     </div>
                     <span>12 members</span>
                 </div>
             </header>
             <main>
+                <div id="topRow">
+                    <div id="visits">
+                        <div id="visitsInfo">
+                            <span>Visits for today</span>
+                            <span class="bigNumber">824</span>
+                            <div class="visitsValues">
+                                <div class="visitsIcon">
+                                    <i>star</i>
+                                </div>
+                                <div class="valueWrapper">
+                                    <span>Popularity</span>
+                                    <span>93</span>
+                                </div>
+                            </div>
+                            <div class="visitsValues">
+                                <div class="visitsIcon">
+                                    <i>stonks</i>
+                                </div>
+                                <div class="valueWrapper">
+                                    <span>General rate</span>
+                                    <span>4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <img src>
+                        <a id="statistic">
+                            VIEW FULL STATISTIC >
+                        </a>
+                    </div>
+                    <div id="popularity">
+                        <div id="popTop">
+                            <div id="popRate">
+                                <span>Popularity rate</span>
+                                <div id="popValue">
+                                    <span>87</span>
+                                    <span>+2</span>
+                                </div>
+                            </div>
+                            <img alt="meter">
+                        </div>
+                        <p>Your Rate has increased because of your recent
+                            update activity. Keep moving forward and get
+                            more points!
+                        </p>
+                        <div id="popInsights">
+                            <img alt="plane">
+                            <p>
+                                See insights into how to manage all
+                                aspects of your startup.
+                            </p>
+                            <div id="insightIcon">
+                                <i>play_button</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bottomRow">
+                    <divclass="bottomBox">
+                        <h1>Finance Performance</h1>
+                        <div id="finance">
+                            <div id="financeTop">
+                                <div id="income">
+                                    <div id="incomeIcon">
+                                        <i>$</i>
+                                    </div>
+                                    <div id="monthlyIncome">
+                                        <span>12,841</span>
+                                        <span>Monthly Income</span>
+                                    </div>
+                                </div>
+                                <div id="calendar">
+                                    <i>calendar</i>
+                                </div>
+                            </div>
+                            <div id="financeChart">
+                                <img alt="chart">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottomBox">
+                        <h1>TOP Performers</h1>
+                        <div id="performers">
+                            <div class="performerRow">
+                                <img alt="performer">
+                                <div class="performerInfo">
+                                    <span>Bessie Cooper</span>
+                                    <span>Online<i class="fa-solid fa-circle"></i></span>
+                                </div>
+                                <div class="performerRating">
+                                    <span>4.3</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="performerRow">
+                                <img alt="performer">
+                                <div class="performerInfo">
+                                    <span>Albert Flores</span>
+                                    <span>Online<i class="fa-solid fa-circle"></i></span>
+                                </div>
+                                <div class="performerRating">
+                                    <span>4.7</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="performerRow">
+                                <img alt="performer">
+                                <div class="performerInfo">
+                                    <span>Guy Hawkins</span>
+                                    <span>2 minutes ago</span>
+                                </div>
+                                <div class="performerRating">
+                                    <span>4.4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottomBox">
+                        <h1>Targeting By Region</h1>
+                        <div id="region">
+                            <div id="poland">
+                                <img alt="poland">
+                                <div id="polandInfo">
+                                    <span>Poland</span>
+                                    <div id="polandNumbers">
+                                        <span>23.03%</span>
+                                        <span><i>up_arrow</i>4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mapPoint">
+                                <div>
+                                    <div>
 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mapPoint">
+                                <div>
+                                    <div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
 </body>
+
 </html>
