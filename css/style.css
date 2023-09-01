@@ -1,6 +1,10 @@
 body #shell {
   padding: 1em;
   border-radius: 45px;
+  display: flex;
+  background-color: #4b7284;
+  width: 60%;
+  aspect-ratio: 3/2;
 }
 
 body #shell #mainWrapper main {
@@ -53,14 +57,4 @@ body #shell #mainWrapper main #topRow #visits #visitsInfo {
   background-size: cover;
   width: 60%;
   height: 20vh;
-<<<<<<< HEAD
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */
-
-=======
-}/*# sourceMappingURL=style.css.map */
->>>>>>> 227c13442f9cdc19b6b52c4bccb70c98353a597f
