@@ -52,7 +52,10 @@ header{
 
 main {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:flex-end;
+    flex-direction: row;
+    width: 100%;
 }
 
 
@@ -60,11 +63,15 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 .bottombox {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.target {
+
 }
