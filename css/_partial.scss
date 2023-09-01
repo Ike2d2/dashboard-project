@@ -1,22 +1,26 @@
 @use 'vars';
 
-%shell{
+%shell {
     padding: 1em;
     border-radius: 45px;
+    display: flex;
+    background-color: vars.$dashboard;
+    width: 60%;
+    aspect-ratio: 3/2;
 }
 
-%main{
-    padding: 2em;
+%main {
+    padding: 4%;
     border-radius: 30px;
 }
 
-%center{
+%center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-%vertical{
+%sidebar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

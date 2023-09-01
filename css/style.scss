@@ -1,79 +1,87 @@
 @use 'vars';
 @use 'partial';
 
-body{
+body {
     @extend %center;
     background-color: vars.$background;
     height: 100vh;
-}
-    #shell{
+    font-size: .8vw;
+    font-family: 'Oswald', sans-serif;
+
+    #shell {
         @extend %shell;
         display: flex;
         background-color: vars.$dashboard;
-    }
-        #sidebar{
-            @extend %vertical;
+
+        #sidebar {
+            @extend %sidebar;
         }
 
-        #mainWrapper{
+        #mainWrapper {
             width: 100%;
             display: flex;
             flex-direction: column;
-        }
-            header{
+
+            header {
                 @extend %center;
                 padding: 1em;
-                margin-bottom: 2em;
             }
 
             main {
                 @extend %main;
                 display: flex;
+                flex-direction: column;
                 background-color: vars.$content;
+                height: 100%;
+
+                #topRow {
+                    column-gap: 30px;
+                    #visits {
+                        width: 66%;
+                        position: relative;
+                        height: 100%;
+                        #visitsInfo {
+                            background-image: url(../images/visits-img.JPG);
+                            background-position: center;
+                            background-size: cover;
+                            height: 100%;
+                        }
+                        #statistic {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                        }
+                    }
+
+                    #popularity {
+                        width: 33%;
+                        display: flex;
+                        flex-direction: column;
+
+                        #popTop {
+                            display: flex;
+
+                            #popRate {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        }
+
+                        #popInsights {
+                            display: flex;
+                        }
+                    }
+                }
+
+                #bottomRow {
+                }
             }
-                
-#visitsInfo {
-    background-image: url(../images/visits-img.JPG);
-    background-position: center;
-    background-size: cover;
-    width:60%;
-    height: 20vh;
+        }
+    }
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-
-}
-
-#bottomRow {
-    display:flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 100%
-}
-
-#topRow{
+.row {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-
-.bottomBox {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-#visits {
-    width:66%;
-
-}
-
-
-#popularity {
-    width: 33%;
+    height: 100%;
 }
