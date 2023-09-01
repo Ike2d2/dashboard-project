@@ -1,54 +1,86 @@
 @use 'vars';
 @use 'partial';
 
-body{
+body {
     @extend %center;
     background-color: vars.$background;
     height: 100vh;
+    font-size: .8vw;
+    font-family: 'Oswald', sans-serif;
 
-    #shell{
+    #shell {
         @extend %shell;
         display: flex;
         background-color: vars.$dashboard;
 
-        #sidebar{
+        #sidebar {
             @extend %sidebar;
         }
 
-        #mainWrapper{
+        #mainWrapper {
             width: 100%;
             display: flex;
             flex-direction: column;
 
-            header{
+            header {
                 @extend %center;
                 padding: 1em;
-                margin-bottom: 2em;
             }
 
             main {
                 @extend %main;
                 display: flex;
-                flex-wrap: wrap;
+                flex-direction: column;
                 background-color: vars.$content;
+                height: 100%;
 
-                #topRow{
-                    width: 100%;
-
+                #topRow {
+                    column-gap: 30px;
                     #visits {
+                        width: 66%;
+                        position: relative;
                         #visitsInfo {
                             background-image: url(../images/visits-img.JPG);
                             background-position: center;
                             background-size: cover;
-                            width:60%;
-                            height: 20vh;
+                            height: 100%;
+                        }
+                        #statistic {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
                         }
                     }
+
+                    #popularity {
+                        width: 33%;
+                        display: flex;
+                        flex-direction: column;
+
+                        #popTop {
+                            display: flex;
+
+                            #popRate {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        }
+
+                        #popInsights {
+                            display: flex;
+                        }
+                    }
+                }
+
+                #bottomRow {
                 }
             }
         }
     }
 }
 
-
-
+.row {
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
