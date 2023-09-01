@@ -1,0 +1,24 @@
+@use 'vars';
+
+%shell{
+    padding: 7em 1em 1em 1em;
+    border-radius: 45px;
+}
+
+%wrapper{
+    padding: 2em;
+    border-radius: 45px;
+}
+
+%centered{
+    display: flex;
+    justify-content: space-between;
+}
+
+%vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 150px;
+    padding: 1em;
+}
