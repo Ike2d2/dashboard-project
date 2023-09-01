@@ -1,0 +1,7 @@
+@use 'partials';
+@use 'vars';
+
+
+body{
+    background-color: vars.$background;
+}
