@@ -34,6 +34,8 @@ body{
             }
                 #topRow{
                     width: 100%;
+                    display: flex;
+                    flex-direction: row;
                 }
 #visitsInfo {
     background-image: url(../images/visits-img.JPG);
@@ -45,11 +47,18 @@ body{
 
 main {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+
 }
 
 #bottomRow {
-    display: flex;
-    
+    @extend %center;
+    flex-direction: row;
+    width: 100%
 }
 
+.bottomBox {
+    @extend %center;
+    width: 100%;
+    height: 40vh;
+}   
