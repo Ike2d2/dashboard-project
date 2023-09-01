@@ -1,16 +1,17 @@
 #shell {
-  padding: 7em 1em 1em 1em;
+  padding: 1em;
   border-radius: 45px;
 }
 
-#mainWrapper {
+main {
   padding: 2em;
-  border-radius: 45px;
+  border-radius: 30px;
 }
 
-#shell, header {
+body, header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 #sidebar {
@@ -23,20 +24,21 @@
 
 body {
   background-color: #465e6c;
+  height: 100vh;
 }
 
 #shell {
-  margin: 100px;
+  display: flex;
   background-color: #4b7284;
 }
 
 #mainWrapper {
-  background-color: #ffffff;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-  margin-top: -100px;
   padding: 1em;
   margin-bottom: 2em;
 }
@@ -62,4 +64,5 @@ header {
 main {
   display: flex;
   flex-wrap: wrap;
+  background-color: #ffffff;
 }/*# sourceMappingURL=style.css.map */

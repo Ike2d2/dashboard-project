@@ -2,28 +2,26 @@
 @use 'partial';
 
 body{
+    @extend %center;
     background-color: vars.$background;
+    height: 100vh;
+}
 
-} 
 #shell{
     @extend %shell;
-    @extend %centered;
-    margin: 100px;
+    display: flex;
     background-color: vars.$dashboard;
 }
 
 #mainWrapper{
-    @extend %wrapper;
-}
-
-#mainWrapper{
-    background-color: vars.$content;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header{
-    @extend %centered;
-    margin-top: -100px;
+    @extend %center;
+    // margin-top: -100px;
     padding: 1em;
     margin-bottom: 2em;
 }
@@ -51,6 +49,8 @@ header{
 }
 
 main {
+    @extend %main;
     display: flex;
     flex-wrap: wrap;
+    background-color: vars.$content;
 }
