@@ -29,14 +29,9 @@ body{
             main {
                 @extend %main;
                 display: flex;
-                flex-wrap: wrap;
                 background-color: vars.$content;
             }
-                #topRow{
-                    width: 100%;
-                    display: flex;
-                    flex-direction: row;
-                }
+                
 #visitsInfo {
     background-image: url(../images/visits-img.JPG);
     background-position: center;
@@ -52,13 +47,17 @@ main {
 }
 
 #bottomRow {
-    @extend %center;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
     flex-direction: row;
     width: 100%
 }
 
-.bottomBox {
-    @extend %center;
+#topRow{
     width: 100%;
-    height: 40vh;
-}   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
