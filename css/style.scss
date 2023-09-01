@@ -48,8 +48,8 @@ main {
 
 #bottomRow {
     display:flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: space-between;
     flex-direction: row;
     width: 100%
 }
@@ -60,4 +60,20 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+}
+
+.bottomBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#visits {
+    width:66%;
+
+}
+
+
+#popularity {
+    width: 33%;
 }
