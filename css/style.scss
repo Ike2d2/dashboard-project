@@ -1,6 +1,56 @@
 @use 'vars';
+@use 'partial';
 
 body{
     background-color: vars.$background;
 
 } 
+#shell{
+    @extend %shell;
+    @extend %centered;
+    margin: 100px;
+    background-color: vars.$dashboard;
+}
+
+#mainWrapper{
+    @extend %wrapper;
+}
+
+#mainWrapper{
+    background-color: vars.$content;
+    width: 100%;
+}
+
+header{
+    @extend %centered;
+    margin-top: -100px;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+#sidebar{
+    @extend %vertical;
+}
+
+#visits-img{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+#topRow{
+    width: 100%;
+}
+
+#visitsInfo {
+    background-image: url(../images/visits-img.JPG);
+    background-position: center;
+    background-size: cover;
+    width:60%;
+    height: 20vh;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
