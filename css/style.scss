@@ -5,52 +5,50 @@ body{
     @extend %center;
     background-color: vars.$background;
     height: 100vh;
+
+    #shell{
+        @extend %shell;
+        display: flex;
+        background-color: vars.$dashboard;
+
+        #sidebar{
+            @extend %vertical;
+        }
+
+        #mainWrapper{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            header{
+                @extend %center;
+                padding: 1em;
+                margin-bottom: 2em;
+            }
+
+            main {
+                @extend %main;
+                display: flex;
+                flex-wrap: wrap;
+                background-color: vars.$content;
+
+                #topRow{
+                    width: 100%;
+
+                    #visits {
+                        #visitsInfo {
+                            background-image: url(../images/visits-img.JPG);
+                            background-position: center;
+                            background-size: cover;
+                            width:60%;
+                            height: 20vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-#shell{
-    @extend %shell;
-    display: flex;
-    background-color: vars.$dashboard;
-}
 
-#mainWrapper{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
 
-header{
-    @extend %center;
-    // margin-top: -100px;
-    padding: 1em;
-    margin-bottom: 2em;
-}
-
-#sidebar{
-    @extend %vertical;
-}
-
-#visits-img{
-    width: 100%;
-    position: relative;
-    z-index: 0;
-}
-
-#topRow{
-    width: 100%;
-}
-
-#visitsInfo {
-    background-image: url(../images/visits-img.JPG);
-    background-position: center;
-    background-size: cover;
-    width:60%;
-    height: 20vh;
-}
-
-main {
-    @extend %main;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: vars.$content;
-}

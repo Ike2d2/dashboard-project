@@ -1,20 +1,20 @@
-#shell {
+body #shell {
   padding: 1em;
   border-radius: 45px;
 }
 
-main {
+body #shell #mainWrapper main {
   padding: 2em;
   border-radius: 30px;
 }
 
-body, header {
+body, body #shell #mainWrapper header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#sidebar {
+body #shell #sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,43 +26,31 @@ body {
   background-color: #465e6c;
   height: 100vh;
 }
-
-#shell {
+body #shell {
   display: flex;
   background-color: #4b7284;
 }
-
-#mainWrapper {
+body #shell #mainWrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-
-header {
+body #shell #mainWrapper header {
   padding: 1em;
   margin-bottom: 2em;
 }
-
-#visits-img {
-  width: 100%;
-  position: relative;
-  z-index: 0;
+body #shell #mainWrapper main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
 }
-
-#topRow {
+body #shell #mainWrapper main #topRow {
   width: 100%;
 }
-
-#visitsInfo {
+body #shell #mainWrapper main #topRow #visits #visitsInfo {
   background-image: url(../images/visits-img.JPG);
   background-position: center;
   background-size: cover;
   width: 60%;
   height: 20vh;
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #ffffff;
 }/*# sourceMappingURL=style.css.map */
