@@ -197,6 +197,10 @@ body #shell #mainWrapper main #bottomRow #performers {
 body #shell #mainWrapper main #bottomRow #performers hr {
   margin-top: 10px;
 }
+body #shell #mainWrapper main #bottomRow #performers .fa-circle {
+  color: green;
+  font-size: 0.6vw;
+}
 
 .bigNumber {
   font-size: 60px;
