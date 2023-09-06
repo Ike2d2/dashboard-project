@@ -205,6 +205,11 @@ body #shell #mainWrapper main #bottomRow #performers hr {
 }
 
 #popularitySide {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7d3c1;
+  height: 100%;
   background-image: url(../images/graph.png);
   background-repeat: no-repeat;
   background-position: center;
