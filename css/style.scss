@@ -1,13 +1,14 @@
 @use 'vars';
 @use 'partial';
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@200;300;400&family=Montserrat:wght@400;700&family=Oswald:wght@200;300;400&display=swap');
 body {
     @extend %center;
     background-color: vars.$background;
-    height: 100vh;
     font-size: .8vw;
     font-family: 'Oswald', sans-serif;
-
+    font-weight: 200;
+    padding: 100px 70px;
+    
     #shell {
         @extend %shell;
         display: flex;
@@ -17,6 +18,7 @@ body {
             @extend %sidebar;
             text-align: center;
             align-items: center;
+            color: white;
 
             #logo {
                 display: flex;
@@ -24,7 +26,7 @@ body {
             }
 
             #logo img{
-                width: 75px;
+                width: 55px;
             }
 
             #sideNav {
@@ -32,6 +34,16 @@ body {
                 flex-direction: column;
                 justify-self: space-between;
                 row-gap: 2em;
+
+                .shellIcon img{
+                    @extend %icons;
+                }
+                img#star-icon{
+                    width: 15px;
+                    padding: .8em;
+                    background-color: white;
+                    border-radius: 25px;
+                }
             }
         }
 
@@ -42,8 +54,34 @@ body {
             flex-direction: column;
 
             header {
-                @extend %center;
-                padding: 1em;
+                @extend %header;
+                padding: 1em 3em;
+                color: white;
+                
+                #back{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 5%;
+                    align-items: center;
+                    gap: 1em;
+
+                    .left-arrow{
+                        border-radius: 45px;
+                        background-color: white;
+                        color: black;
+                        width: 20px;
+                    }
+                }
+                #headerNav {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 25%;
+                }
+                #members {
+                    width: 25%;
+                    display: flex;
+                    justify-content: space-between;
+                }
             }
 
             main {
@@ -52,11 +90,18 @@ body {
                 flex-direction: column;
                 background-color: vars.$content;
                 height: 100%;
+                justify-content: space-between;
+                font-family: 'Montserrat', sans-serif;
 
+                #topRow, #bottomRow{
+                    display: flex;
+
+                }
                 #topRow {
                     column-gap: 30px;
+                    height: 40%;
                     #visits {
-                        width: 66%;
+                        width: 100%;
                         position: relative;
                         height: 100%;
                         #visitsInfo {
@@ -64,18 +109,29 @@ body {
                             background-position: center;
                             background-size: cover;
                             height: 100%;
+                            @extend main;
+                            justify-content: space-around;
+
                         }
                         #statistic {
-                            position: absolute;
-                            bottom: 0;
-                            right: 0;
+                            padding: 2em;
+                            background-color: lightblue;
+                            border-radius: 25px 0;
+                            width: 35%;
+                            text-align: center;
+                            margin: 2em 4em 0 25em;
                         }
                     }
 
                     #popularity {
-                        width: 33%;
-                        display: flex;
-                        flex-direction: column;
+                        // width: 33%;
+                        // display: flex;
+                        // flex-direction: column;
+                        @extend %navbar;
+                        background-color: vars.$popularity;
+                        @extend %main;
+                        height: 100%;
+
 
                         #popTop {
                             display: flex;
@@ -83,6 +139,10 @@ body {
                             #popRate {
                                 display: flex;
                                 flex-direction: column;
+                            }
+
+                            .meter{
+                                width: 75px;
                             }
                         }
 
@@ -93,17 +153,20 @@ body {
                 }
 
                 #bottomRow {
-
+                    justify-content: space-between;
+                    height: 40%;
                 }
-            }
+                // .row{
+                //     height: 100%;
+                // }
         }
     }
 }
 
+}
 
-.row {
-    width: 100%;
-    display: flex;
-    height: 100%;
-    justify-content: space-between;
+.bigNumber{
+    font-size: 60px;
+    font-family: 'Lexend Mega', sans-serif;
+    font-weight: 300;
 }
