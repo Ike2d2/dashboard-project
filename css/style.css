@@ -103,6 +103,10 @@ body #shell #mainWrapper header #headerNav {
   justify-content: space-between;
   width: 25%;
 }
+body #shell #mainWrapper header #headerNav a {
+  color: white;
+  text-decoration: none;
+}
 body #shell #mainWrapper header #members {
   width: 25%;
   display: flex;

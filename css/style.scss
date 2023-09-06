@@ -85,6 +85,10 @@ body {
                     display: flex;
                     justify-content: space-between;
                     width: 25%;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
                 }
 
                 #members {
