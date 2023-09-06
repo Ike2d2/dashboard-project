@@ -193,7 +193,14 @@ body {
     font-weight: 300;
 }
 
+
+
 #popularitySide {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    background-color: vars.$popularity;
+    height: 100%;
     background-image: url(../images/graph.png);
     background-repeat: no-repeat;
     background-position: center;
