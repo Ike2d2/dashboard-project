@@ -176,10 +176,10 @@ body #shell #mainWrapper main #bottomRow {
 body #shell #mainWrapper main #bottomRow .bottomBox h1 {
   display: flex;
   justify-content: center;
-  font-size: 40px;
+  font-size: 2vw;
 }
 body #shell #mainWrapper main #bottomRow #performers {
-  font-size: 30px;
+  font-size: 1.5vw;
 }
 body #shell #mainWrapper main #bottomRow #performers hr {
   margin-top: 10px;
