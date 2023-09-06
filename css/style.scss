@@ -108,12 +108,11 @@ body {
                 #topRow,
                 #bottomRow {
                     display: flex;
-
                 }
 
                 #topRow {
                     column-gap: 30px;
-                    
+
                     #visits {
                         width: 66%;
                         position: relative;
@@ -121,14 +120,24 @@ body {
                         background-image: url(../images/visits-img.JPG);
                         background-position: center;
                         background-size: cover;
+                        border-radius: 15px;
+                        box-sizing: border-box;
+                        padding: 2vw;
+                        color: white;
 
                         #visitsInfo {
+                            display: flex;
+                            flex-direction: column;
                             justify-content: space-around;
+
+                            .visitsValues {
+                                display: flex;
+                            }
                         }
 
                         #statistic {
                             position: absolute;
-                            border-radius: 25px 0;
+                            border-radius: 25px 0 15px 0;
                             bottom: -10px;
                             right: -10px;
                             background-color: #2A7B97;
@@ -136,6 +145,7 @@ body {
                             justify-content: center;
                             align-items: center;
                             color: white;
+                            padding: 1vw;
                         }
                     }
 
@@ -145,7 +155,9 @@ body {
                         flex-direction: column;
                         background-color: vars.$popularity;
                         height: 100%;
-
+                        border-radius: 15px;
+                        box-sizing: border-box;
+                        padding: 2vw;
 
                         #popTop {
                             display: flex;
@@ -168,15 +180,16 @@ body {
 
                 #bottomRow {
                     justify-content: space-between;
-                      
+
                     .bottomBox h1 {
-                        display:flex;
+                        display: flex;
                         justify-content: center;
                         font-size: 2vw;
-                    } 
-                    
+                    }
+
                     #performers {
                         font-size: 1.5vw;
+
                         hr {
                             margin-top: 10px;
                         }
