@@ -1,0 +1,29 @@
+@use 'vars';
+
+%shell {
+    padding: 1em;
+    border-radius: 45px;
+    display: flex;
+    background-color: vars.$dashboard;
+    width: 60%;
+    aspect-ratio: 3/2;
+}
+
+%main {
+    padding: 4%;
+    border-radius: 30px;
+}
+
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 150px;
+    padding: 1em;
+}
