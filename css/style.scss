@@ -1,6 +1,7 @@
 @use 'vars';
 @use 'partial';
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@200;300;400&family=Montserrat:wght@400;700&family=Oswald:wght@200;300;400&display=swap');
+
 body {
     @extend %center;
     background-color: vars.$background;
@@ -8,7 +9,7 @@ body {
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
     padding: 100px 70px;
-    
+
     #shell {
         @extend %shell;
         display: flex;
@@ -25,7 +26,7 @@ body {
                 flex-direction: column;
             }
 
-            #logo img{
+            #logo img {
                 width: 55px;
             }
 
@@ -35,10 +36,11 @@ body {
                 justify-self: space-between;
                 row-gap: 2em;
 
-                .shellIcon img{
+                .shellIcon img {
                     @extend %icons;
                 }
-                img#star-icon{
+
+                img#star-icon {
                     width: 15px;
                     padding: .8em;
                     background-color: white;
@@ -57,26 +59,28 @@ body {
                 @extend %header;
                 padding: 1em 3em;
                 color: white;
-                
-                #back{
+
+                #back {
                     display: flex;
                     justify-content: space-between;
                     width: 5%;
                     align-items: center;
                     gap: 1em;
 
-                    .left-arrow{
+                    .left-arrow {
                         border-radius: 45px;
                         background-color: white;
                         color: black;
                         width: 20px;
                     }
                 }
+
                 #headerNav {
                     display: flex;
                     justify-content: space-between;
                     width: 25%;
                 }
+
                 #members {
                     width: 25%;
                     display: flex;
@@ -92,44 +96,54 @@ body {
                 height: 100%;
                 justify-content: space-between;
                 font-family: 'Montserrat', sans-serif;
+                row-gap: 30px;
 
-                #topRow, #bottomRow{
+                .row {
+                    width: 100%;
+                    display: flex;
+                    height: 100%;
+                    justify-content: center;
+                }
+
+                #topRow,
+                #bottomRow {
                     display: flex;
 
                 }
+
                 #topRow {
                     column-gap: 30px;
-                    height: 40%;
+                    
                     #visits {
-                        width: 100%;
+                        width: 66%;
                         position: relative;
                         height: 100%;
-                        #visitsInfo {
-                            background-image: url(../images/visits-img.JPG);
-                            background-position: center;
-                            background-size: cover;
-                            height: 100%;
-                            @extend main;
-                            justify-content: space-around;
+                        background-image: url(../images/visits-img.JPG);
+                        background-position: center;
+                        background-size: cover;
 
+                        #visitsInfo {
+                            justify-content: space-around;
                         }
+
                         #statistic {
-                            padding: 2em;
-                            background-color: lightblue;
+                            position: absolute;
                             border-radius: 25px 0;
-                            width: 35%;
-                            text-align: center;
-                            margin: 2em 4em 0 25em;
+                            bottom: -10px;
+                            right: -10px;
+                            background-color: #2A7B97;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
                         }
                     }
 
                     #popularity {
-                        // width: 33%;
-                        // display: flex;
-                        // flex-direction: column;
-                        @extend %navbar;
+                        width: 33%;
+                        display: flex;
+                        flex-direction: column;
                         background-color: vars.$popularity;
-                        @extend %main;
                         height: 100%;
 
 
@@ -141,7 +155,7 @@ body {
                                 flex-direction: column;
                             }
 
-                            .meter{
+                            .meter {
                                 width: 75px;
                             }
                         }
@@ -154,56 +168,32 @@ body {
 
                 #bottomRow {
                     justify-content: space-between;
-                    height: 40%;                         
+                      
+                    .bottomBox h1 {
+                        display:flex;
+                        justify-content: center;
+                        font-size: 40px;
+                    } 
+                    
+                    #performers {
+                        font-size: 30px;
+                        hr {
+                            margin-top: 10px;
+                        }
                     }
                 }
-                // .row{
-                //     height: 100%;
-                // }
+            }
         }
     }
 }
-}
 
-.bigNumber{
+.bigNumber {
     font-size: 60px;
     font-family: 'Lexend Mega', sans-serif;
     font-weight: 300;
-.row {
-    width: 100%;
-    display: flex;
-    height: 100%;
-    justify-content: center;
 }
 
-#statistic {
-    background-color: #2A7B97;
-    border-bottom-right-radius: 25px;
-    border-top-left-radius: 25px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    color: white;
-    width: 50%;
-    height: 20%;
-    
-}
-
-.bottomBox h1 {
-    display:flex;
-    justify-content: center;
-    font-size: 40px;
-}
-
-#performers hr{
-    margin-top: 10px;
-}
-
-#performers {
-    font-size:30px;
-}
-
-#popularity {
+#popularitySide {
     background-image: url(../images/graph.png);
     background-repeat: no-repeat;
     background-position: center;
