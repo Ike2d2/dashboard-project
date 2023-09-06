@@ -206,6 +206,7 @@ body #shell #mainWrapper main #bottomRow #performers .fa-circle {
   font-size: 60px;
   font-family: "Lexend Mega", sans-serif;
   font-weight: 300;
+  margin-bottom: 1.5em;
 }
 
 #popularitySide {
@@ -218,4 +219,15 @@ body #shell #mainWrapper main #bottomRow #performers .fa-circle {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.fa-star:before, .fa-arrow-trend-up:before {
+  background-color: rgba(255, 255, 255, 0.5176470588);
+  padding: 0.5em;
+  border-radius: 5px;
+  margin-right: 1em;
+}
+
+div.visitsValues {
+  margin-top: 2em;
 }/*# sourceMappingURL=style.css.map */
