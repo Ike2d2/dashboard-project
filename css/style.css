@@ -164,13 +164,5 @@ body #shell #mainWrapper main #topRow #popularity #popTop .meter {
 body #shell #mainWrapper main #topRow #popularity #popInsights {
   display: flex;
 }
-body #shell #mainWrapper main #bottomRow, body #shell #mainWrapper main #topRow #visits #visitsInfo #bottomRow {
-  justify-content: space-between;
-  height: 40%;
-}
 
-.bigNumber {
-  font-size: 60px;
-  font-family: "Lexend Mega", sans-serif;
-  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */
