@@ -139,13 +139,22 @@ body #shell #mainWrapper main #topRow #visits {
   background-image: url(../images/visits-img.JPG);
   background-position: center;
   background-size: cover;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 2vw;
+  color: white;
 }
 body #shell #mainWrapper main #topRow #visits #visitsInfo {
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
+}
+body #shell #mainWrapper main #topRow #visits #visitsInfo .visitsValues {
+  display: flex;
 }
 body #shell #mainWrapper main #topRow #visits #statistic {
   position: absolute;
-  border-radius: 25px 0;
+  border-radius: 25px 0 15px 0;
   bottom: -10px;
   right: -10px;
   background-color: #2A7B97;
@@ -153,6 +162,7 @@ body #shell #mainWrapper main #topRow #visits #statistic {
   justify-content: center;
   align-items: center;
   color: white;
+  padding: 1vw;
 }
 body #shell #mainWrapper main #topRow #popularity {
   width: 33%;
@@ -160,6 +170,9 @@ body #shell #mainWrapper main #topRow #popularity {
   flex-direction: column;
   background-color: #f7d3c1;
   height: 100%;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 2vw;
 }
 body #shell #mainWrapper main #topRow #popularity #popTop {
   display: flex;
@@ -187,6 +200,10 @@ body #shell #mainWrapper main #bottomRow #performers {
 }
 body #shell #mainWrapper main #bottomRow #performers hr {
   margin-top: 10px;
+}
+body #shell #mainWrapper main #bottomRow #performers .fa-circle {
+  color: green;
+  font-size: 0.6vw;
 }
 
 .bigNumber {
