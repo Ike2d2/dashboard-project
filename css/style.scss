@@ -33,7 +33,7 @@ body {
             #sideNav {
                 display: flex;
                 flex-direction: column;
-                justify-self: space-between;
+                // justify-self: space-between;
                 row-gap: 2em;
 
                 .shellIcon img {
@@ -95,14 +95,20 @@ body {
                 #members {
                     width: 25%;
                     display: flex;
-                    // justify-content: space-between;
+                    justify-content: end;
+                    align-items: center;
+
+                    .members-number {
+                        margin-left: 1em;
+                    }
 
                     #memberImgs {
                         img {
                             width: 2vw;
                             border-radius: 50%;
                             border: 2px solid #2A7B97;
-                            margin-left: -15px;
+                            margin-left: -8px;
+
                         }
 
                         :first-child {
@@ -116,7 +122,9 @@ body {
                         :last-child {
                             background-color: lightblue;
                         }
+
                     }
+
                 }
             }
 
@@ -170,6 +178,11 @@ body {
                                 display: flex;
                                 align-items: center;
 
+                                .visits-small-number{
+                                    font-size: 1.5em;
+                                    margin-top: .25em;
+                                }
+
                                 .valueWrapper{
                                     display: flex;
                                     flex-direction: column;
@@ -210,25 +223,38 @@ body {
                         height: 100%;
                         border-radius: 15px;
                         box-sizing: border-box;
-                        padding: 1vw;
+                        padding: 1.2em;
                         gap: 2em;
 
                         #popTop {
                             display: flex;
                             align-items: center;
-                            justify-content: space-between;
+                            gap: 4em;
 
                             #popRate {
                                 display: flex;
                                 flex-direction: column;
                                 
+                                #popValue {
+                                    display: flex;
+                                    align-items: end;
+                                    flex-direction: column-reverse;
+
+                                    .small-number{
+                                        background-color: white;
+                                        padding: 2px;
+                                        border-radius: 10px;
+                                        margin: 1em -2em 0 1em;
+                                    }
+                                }
                             }
                             #popRate h1{
                                 font-weight: bold;
                             }
 
                             .meter {
-                                width: 75px;
+                                width: 40%;
+                                margin-top: 1.5em;
                             }
                         }
 
@@ -240,7 +266,7 @@ body {
                             padding: 1em;
                     
                             .plane{
-                                width: 25px;
+                                width: 3em;
 
                             }
                         }
@@ -253,27 +279,103 @@ body {
                 #bottomRow {
                     justify-content: space-between;
 
-                    .bottomBox h1 {
+                    .bottom-finance #finance {
+                        background-color: #f9f9f9;
+                        padding: 2em;
+                        border-radius: 20px;
+
+                        #financeTop {
                         display: flex;
-                        // justify-content: center;
-                        // font-size: 2vw;
-                        font-weight: bold;
-                        margin-bottom: 2em;
-                    }
-
-                    #performers {
-                        // font-size: 1.5vw;
-
-                        hr {
-                            margin-top: 10px;
+                        justify-content: space-between;
+                        gap: 4em;
                         }
 
-                        .fa-circle {
-                            color: green;
-                            font-size: .6vw;
+                        #financeChart img{
+                            max-height: 100px;
+                            width: 100%;
+                            margin-top: 2em;
+                        }
+                        #income {
+                            display: flex;
+
+                        }
+
+                        #incomeIcon img{
+                            background-color: #2A7B97;
+                            padding: .3em;
+                            border-radius: 7px;
+                            margin-right: 1em;
+                            width: 25px;
+                        }
+
+                        #monthlyIncome{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 3px;
+
+                            .month-income{
+                                font-size: 2vh;
+                            }
+                        }
+                        #calendar img{
+                            background-color: white;
+                            padding: .8em;
+                            border-radius: 7px;
+                            margin-right: 1em;
+                            width: 15px;
+                            box-shadow: 0 0 3px 0 #e9e9e9;
                         }
                     }
+                    #bottomBox {
+                        h1 {
+                            font-weight: bold;
+                            margin-bottom: 2em;
+                        }
+    
+                        #performers {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 1em 0;
+                            gap: 1em;
+    
+                            img{
+                                width: 20px;
+                                background-color: #f2d5a2;
+                                border-radius: 20px;
+                                padding: 2px;
+                            }
+
+                            .performerRow {
+                                display: flex;
+                                gap: 1em;
+                                align-items: center;
+                                justify-content: space-between;
+                                
+    
+    
+                                .performerInfo{
+                                    display: flex;
+                                    flex-direction: column;justify-content: space-between;
+                                    margin-right: 3em;
+                                }
+                            }
+    
+                            hr {
+                                margin-top: 10px;
+                            }
+    
+                            .fa-circle {
+                                color: green;
+                                font-size: .6vw;
+                            }
+                        }
+
+
+                    }
+                    
                 }
+
+
             }
         }
     }
@@ -286,28 +388,9 @@ body {
     margin-top: -.25em;
 }
 
-
-
-// #popularitySide {
-//     width: 33%;
-//     display: flex;
-//     flex-direction: column;
-//     background-color: vars.$popularity;
-//     height: 100%;
-//     background-image: url(../images/graph.png);
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     background-size: cover;
-// }
-
 .fa-star:before, .fa-arrow-trend-up:before {
-    background-color: #ffffff84;
+    background-color: rgba(249,249,249,.2);
     padding: .5em;
     border-radius: 5px; 
     margin-right: 1em;
 }
-
-// div.visitsValues{
-//     margin-top: 2em;
-// }
-
