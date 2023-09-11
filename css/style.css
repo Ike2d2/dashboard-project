@@ -3,7 +3,7 @@ body #shell {
   padding: 1em;
   border-radius: 30px;
   display: flex;
-  background-color: linear-gradient(to bottom, rgba(50, 137, 160, 0.25), rgba(255, 255, 255, 0.25));
+  background: linear-gradient(to bottom, rgba(50, 137, 160, 0.25), rgba(255, 255, 255, 0.25));
   width: 80%;
 }
 
@@ -174,6 +174,12 @@ body #shell #mainWrapper main #topRow #visits #visitsInfo {
 body #shell #mainWrapper main #topRow #visits #visitsInfo .visitsValues {
   display: flex;
 }
+body #shell #mainWrapper main #topRow #visits #visitsInfo .visitsValues i {
+  background-color: rgba(249, 249, 249, 0.2);
+  padding: 0.5em;
+  border-radius: 5px;
+  margin-right: 1em;
+}
 body #shell #mainWrapper main #topRow #visits #visitsInfo .visitsValues {
   display: flex;
   align-items: center;
@@ -262,6 +268,10 @@ body #shell #mainWrapper main #topRow #popularity #popInsights p {
 body #shell #mainWrapper main #bottomRow {
   justify-content: space-between;
 }
+body #shell #mainWrapper main #bottomRow h1 {
+  font-weight: bold;
+  margin-bottom: 2em;
+}
 body #shell #mainWrapper main #bottomRow .bottom-finance #finance {
   background-color: #f9f9f9;
   padding: 2em;
@@ -271,31 +281,27 @@ body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop {
   display: flex;
   justify-content: space-between;
   gap: 4em;
+  align-items: center;
 }
-body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeChart img {
-  max-height: 100px;
-  width: 100%;
-  margin-top: 2em;
-}
-body #shell #mainWrapper main #bottomRow .bottom-finance #finance #income {
+body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop #income {
   display: flex;
 }
-body #shell #mainWrapper main #bottomRow .bottom-finance #finance #incomeIcon img {
+body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop #income #incomeIcon img {
   background-color: #2A7B97;
   padding: 0.3em;
   border-radius: 7px;
   margin-right: 1em;
   width: 25px;
 }
-body #shell #mainWrapper main #bottomRow .bottom-finance #finance #monthlyIncome {
+body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop #income #monthlyIncome {
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
-body #shell #mainWrapper main #bottomRow .bottom-finance #finance #monthlyIncome .month-income {
+body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop #income #monthlyIncome .month-income {
   font-size: 2vh;
 }
-body #shell #mainWrapper main #bottomRow .bottom-finance #finance #calendar img {
+body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop #calendar img {
   background-color: white;
   padding: 0.8em;
   border-radius: 7px;
@@ -303,40 +309,40 @@ body #shell #mainWrapper main #bottomRow .bottom-finance #finance #calendar img 
   width: 15px;
   box-shadow: 0 0 3px 0 #e9e9e9;
 }
-body #shell #mainWrapper main #bottomRow #bottomBox h1 {
-  font-weight: bold;
-  margin-bottom: 2em;
+body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeChart img {
+  max-height: 100px;
+  width: 100%;
+  margin-top: 2em;
 }
-body #shell #mainWrapper main #bottomRow #bottomBox #performers {
+body #shell #mainWrapper main #bottomRow .bottomBox #performers {
   display: flex;
   flex-direction: column;
   padding: 1em 0;
   gap: 1em;
 }
-body #shell #mainWrapper main #bottomRow #bottomBox #performers img {
+body #shell #mainWrapper main #bottomRow .bottomBox #performers img {
   width: 20px;
   background-color: #f2d5a2;
   border-radius: 20px;
   padding: 2px;
 }
-body #shell #mainWrapper main #bottomRow #bottomBox #performers .performerRow {
+body #shell #mainWrapper main #bottomRow .bottomBox #performers .performerRow {
   display: flex;
   gap: 1em;
   align-items: center;
   justify-content: space-between;
 }
-body #shell #mainWrapper main #bottomRow #bottomBox #performers .performerRow .performerInfo {
+body #shell #mainWrapper main #bottomRow .bottomBox #performers .performerRow .performerInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-right: 3em;
 }
-body #shell #mainWrapper main #bottomRow #bottomBox #performers hr {
-  margin-top: 10px;
-}
-body #shell #mainWrapper main #bottomRow #bottomBox #performers .fa-circle {
-  color: green;
-  font-size: 0.6vw;
+body #shell #mainWrapper main #bottomRow .bottomBox #performers hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background-color: #e9e9e9;
 }
 
 .bigNumber {
@@ -344,11 +350,4 @@ body #shell #mainWrapper main #bottomRow #bottomBox #performers .fa-circle {
   font-family: "Lexend Mega", sans-serif;
   font-weight: 300;
   margin-top: -0.25em;
-}
-
-.fa-star:before, .fa-arrow-trend-up:before {
-  background-color: rgba(249, 249, 249, 0.2);
-  padding: 0.5em;
-  border-radius: 5px;
-  margin-right: 1em;
 }/*# sourceMappingURL=style.css.map */
