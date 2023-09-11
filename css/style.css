@@ -5,7 +5,6 @@ body #shell {
   display: flex;
   background-color: linear-gradient(to bottom, rgba(50, 137, 160, 0.25), rgba(255, 255, 255, 0.25));
   width: 80%;
-  aspect-ratio: 3/2;
 }
 
 body #shell #mainWrapper main {
@@ -19,7 +18,7 @@ body {
   align-items: center;
 }
 
-body #shell #mainWrapper header {
+body #shell #mainWrapper header, body #shell #mainWrapper main #topRow #popularity #popInsights {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,7 +95,8 @@ body #shell #mainWrapper header #back .left-arrow {
   border-radius: 45px;
   background-color: white;
   color: black;
-  width: 20px;
+  width: 10px;
+  padding: 0.5em;
 }
 body #shell #mainWrapper header #headerNav {
   display: flex;
@@ -160,14 +160,28 @@ body #shell #mainWrapper main #topRow #visits {
   box-sizing: border-box;
   padding: 2vw;
   color: white;
+  display: flex;
 }
 body #shell #mainWrapper main #topRow #visits #visitsInfo {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 body #shell #mainWrapper main #topRow #visits #visitsInfo .visitsValues {
   display: flex;
+}
+body #shell #mainWrapper main #topRow #visits #visitsInfo .visitsValues {
+  display: flex;
+  align-items: center;
+}
+body #shell #mainWrapper main #topRow #visits #visitsInfo .visitsValues .valueWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1.25em;
+}
+body #shell #mainWrapper main #topRow #visits #visitsInfo :is(span:first-child) {
+  margin-top: -1.5em;
 }
 body #shell #mainWrapper main #topRow #visits #statistic {
   position: absolute;
@@ -179,41 +193,59 @@ body #shell #mainWrapper main #topRow #visits #statistic {
   justify-content: center;
   align-items: center;
   color: white;
-  padding: 1vw;
+  padding: 2em;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+}
+body #shell #mainWrapper main #topRow #visits #statistic img {
+  width: 10px;
+  margin-left: 1em;
 }
 body #shell #mainWrapper main #topRow #popularity {
-  width: 33%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   background-color: #f7d3c1;
   height: 100%;
   border-radius: 15px;
   box-sizing: border-box;
-  padding: 2vw;
+  padding: 1vw;
+  gap: 2em;
 }
 body #shell #mainWrapper main #topRow #popularity #popTop {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 body #shell #mainWrapper main #topRow #popularity #popTop #popRate {
   display: flex;
   flex-direction: column;
 }
+body #shell #mainWrapper main #topRow #popularity #popTop #popRate h1 {
+  font-weight: bold;
+}
 body #shell #mainWrapper main #topRow #popularity #popTop .meter {
   width: 75px;
 }
 body #shell #mainWrapper main #topRow #popularity #popInsights {
-  display: flex;
+  gap: 1em;
+  background-color: white;
+  border-radius: 7px;
+  padding: 1em;
+}
+body #shell #mainWrapper main #topRow #popularity #popInsights .plane {
+  width: 25px;
+}
+body #shell #mainWrapper main #topRow #popularity #popInsights p {
+  font-size: 1em;
 }
 body #shell #mainWrapper main #bottomRow {
   justify-content: space-between;
 }
 body #shell #mainWrapper main #bottomRow .bottomBox h1 {
   display: flex;
-  justify-content: center;
-  font-size: 2vw;
-}
-body #shell #mainWrapper main #bottomRow #performers {
-  font-size: 1.5vw;
+  font-weight: bold;
+  margin-bottom: 2em;
 }
 body #shell #mainWrapper main #bottomRow #performers hr {
   margin-top: 10px;
@@ -224,22 +256,10 @@ body #shell #mainWrapper main #bottomRow #performers .fa-circle {
 }
 
 .bigNumber {
-  font-size: 60px;
+  font-size: 6em;
   font-family: "Lexend Mega", sans-serif;
   font-weight: 300;
-  margin-bottom: 1.5em;
-}
-
-#popularitySide {
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-  background-color: #f7d3c1;
-  height: 100%;
-  background-image: url(../images/graph.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  margin-top: -0.25em;
 }
 
 .fa-star:before, .fa-arrow-trend-up:before {
@@ -247,8 +267,4 @@ body #shell #mainWrapper main #bottomRow #performers .fa-circle {
   padding: 0.5em;
   border-radius: 5px;
   margin-right: 1em;
-}
-
-div.visitsValues {
-  margin-top: 2em;
 }/*# sourceMappingURL=style.css.map */

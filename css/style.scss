@@ -77,7 +77,8 @@ body {
                         border-radius: 45px;
                         background-color: white;
                         color: black;
-                        width: 20px;
+                        width: 10px;
+                        padding: 0.5em;
                     }
                 }
 
@@ -155,15 +156,30 @@ body {
                         box-sizing: border-box;
                         padding: 2vw;
                         color: white;
+                        display: flex;
 
                         #visitsInfo {
                             display: flex;
                             flex-direction: column;
-                            justify-content: space-around;
+                            justify-content: space-evenly;
 
                             .visitsValues {
                                 display: flex;
                             }
+                            .visitsValues{
+                                display: flex;
+                                align-items: center;
+
+                                .valueWrapper{
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    margin-top: 1.25em;
+                                }
+                            }
+                        }
+                        #visitsInfo :is(span:first-child) {
+                            margin-top: -1.5em;
                         }
 
                         #statistic {
@@ -176,26 +192,39 @@ body {
                             justify-content: center;
                             align-items: center;
                             color: white;
-                            padding: 1vw;
+                            padding: 2em;
+                            font-family: "Oswald", sans-serif;
+                            font-weight: bold;
+                            img{
+                                width: 10px;
+                                margin-left: 1em;
+                            }
                         }
                     }
 
                     #popularity {
-                        width: 33%;
+                        width: 40%;
                         display: flex;
                         flex-direction: column;
                         background-color: vars.$popularity;
                         height: 100%;
                         border-radius: 15px;
                         box-sizing: border-box;
-                        padding: 2vw;
+                        padding: 1vw;
+                        gap: 2em;
 
                         #popTop {
                             display: flex;
+                            align-items: center;
+                            justify-content: space-between;
 
                             #popRate {
                                 display: flex;
                                 flex-direction: column;
+                                
+                            }
+                            #popRate h1{
+                                font-weight: bold;
                             }
 
                             .meter {
@@ -204,7 +233,19 @@ body {
                         }
 
                         #popInsights {
-                            display: flex;
+                            @extend %header;
+                            gap: 1em;
+                            background-color: white;
+                            border-radius: 7px;
+                            padding: 1em;
+                    
+                            .plane{
+                                width: 25px;
+
+                            }
+                        }
+                        #popInsights p{
+                            font-size: 1em;
                         }
                     }
                 }
@@ -214,12 +255,14 @@ body {
 
                     .bottomBox h1 {
                         display: flex;
-                        justify-content: center;
-                        font-size: 2vw;
+                        // justify-content: center;
+                        // font-size: 2vw;
+                        font-weight: bold;
+                        margin-bottom: 2em;
                     }
 
                     #performers {
-                        font-size: 1.5vw;
+                        // font-size: 1.5vw;
 
                         hr {
                             margin-top: 10px;
@@ -237,33 +280,34 @@ body {
 }
 
 .bigNumber {
-    font-size: 60px;
+    font-size: 6em;
     font-family: 'Lexend Mega', sans-serif;
     font-weight: 300;
-    margin-bottom: 1.5em;
+    margin-top: -.25em;
 }
 
 
 
-#popularitySide {
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    background-color: vars.$popularity;
-    height: 100%;
-    background-image: url(../images/graph.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
+// #popularitySide {
+//     width: 33%;
+//     display: flex;
+//     flex-direction: column;
+//     background-color: vars.$popularity;
+//     height: 100%;
+//     background-image: url(../images/graph.png);
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: cover;
+// }
 
 .fa-star:before, .fa-arrow-trend-up:before {
     background-color: #ffffff84;
     padding: .5em;
-    border-radius: 5px;
+    border-radius: 5px; 
     margin-right: 1em;
 }
 
-div.visitsValues{
-    margin-top: 2em;
-}
+// div.visitsValues{
+//     margin-top: 2em;
+// }
+
