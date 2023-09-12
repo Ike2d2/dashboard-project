@@ -14,12 +14,14 @@ body {
         @extend %shell;
         display: flex;
         background: vars.$dashboard;
+        font-size: .8em;
 
         #sidebar {
             @extend %sidebar;
             text-align: center;
             align-items: center;
             color: white;
+            
 
             #logo {
                 display: flex;
@@ -286,15 +288,18 @@ body {
 
                 #bottomRow{
                     justify-content: space-between;
+                    color: #969696;
                     h1{
                         font-weight: bold;
                         margin-bottom: 2em;
+                        color: black;
                     }
                     .bottom-finance {                        
                         #finance {
                         background-color: #f9f9f9;
                         padding: 2em;
                         border-radius: 20px;
+                        height: 71%;
 
                         #financeTop {
                             display: flex;
@@ -319,6 +324,7 @@ body {
         
                                     .month-income{
                                         font-size: 2vh;
+                                        color: black;
                                     }
                                 }
 
@@ -347,11 +353,14 @@ body {
                     }
 
                     .bottomBox{
+                        padding: 0 3em;
+
                         #performers{
                             display: flex;
                             flex-direction: column;
                             padding: 1em 0;
                             gap: 1em;
+                            // width: 20%;
 
                             img{
                                 width: 20px;
@@ -372,7 +381,34 @@ body {
                                     display: flex;
                                     flex-direction: column;justify-content: space-between;
                                     margin-right: 3em;
+                                    gap: .5em;
+
+                                    span {
+                                        .fa-circle {
+                                            color: green;
+                                            font-size: .7em;
+                                            margin-left: 1em;
+                                        }
+
+                                    }
+                                    
+
                                 }
+                                .performerRating{
+                                    .bad-rate{
+                                        background-color: #fdf4f0;
+                                        padding: .5em;
+                                        border-radius: 5px;
+                                        color: #d3a48e;
+                                    }
+                                    .good-rate{
+                                        background-color: #eaf2f5;
+                                        padding: .5em;
+                                        border-radius: 5px;
+                                        color: #68a1b5;
+                                    }
+                                }
+
                             }
                             hr {
                                 border: none;
@@ -383,23 +419,66 @@ body {
 
                         }
                     }
-                    
+                    .bottomBox2{
+                        width: 37%;
+                        .targeting{
+                            height: 100%;
+                            .map{
+                                background-color: #fbfbfb;
+                                border-radius: 25px;
+                                width: 100%;
+                                height: 90%;
+                            }
+
+                            #region{
+                                // background-color: white;
+                                width: fit-content;
+                                font-size: .5em;
+                                // border-radius: 5px;
+
+                                #poland{
+                                    display: flex;
+                                    padding: 1em;
+                                    margin-top: -27em;
+                                    margin-left: 30em;
+                                    background-color: white;
+                                    position: relative;
+                                    border-radius: 5px;
+                                    box-shadow: 0 0 3px 0 #e9e9e9;
+                                    width: 11em;
+
+                                    #polandInfo{
+                                        margin-left: 1em;
+                                        
+
+                                        #polandNumbers{
+                                            font-family: "Oswald", sans-serif;
+                                            .rating{
+                                                color: green;
+                                                font-weight: bold;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
+
+    .bigNumber {
+        font-size: 6em;
+        font-family: 'Lexend Mega', sans-serif;
+        font-weight: 300;
+        margin-top: -.25em;
+    }
+
+    b{
+        font-weight: bold;
+        color: black;
+    }
+
 }
 
-.bigNumber {
-    font-size: 6em;
-    font-family: 'Lexend Mega', sans-serif;
-    font-weight: 300;
-    margin-top: -.25em;
-}
-
-// .fa-star:before, .fa-arrow-trend-up:before {
-//     background-color: rgba(249,249,249,.2);
-//     padding: .5em;
-//     border-radius: 5px; 
-//     margin-right: 1em;
-// }

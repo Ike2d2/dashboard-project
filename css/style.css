@@ -4,7 +4,7 @@ body #shell {
   border-radius: 30px;
   display: flex;
   background: linear-gradient(to bottom, rgba(50, 137, 160, 0.25), rgba(255, 255, 255, 0.25));
-  width: 80%;
+  width: 70%;
 }
 
 body #shell #mainWrapper main {
@@ -47,6 +47,7 @@ body {
 body #shell {
   display: flex;
   background: linear-gradient(to bottom, rgba(50, 137, 160, 0.25), rgba(255, 255, 255, 0.25));
+  font-size: 0.8em;
 }
 body #shell #sidebar {
   text-align: center;
@@ -267,15 +268,18 @@ body #shell #mainWrapper main #topRow #popularity #popInsights p {
 }
 body #shell #mainWrapper main #bottomRow {
   justify-content: space-between;
+  color: #969696;
 }
 body #shell #mainWrapper main #bottomRow h1 {
   font-weight: bold;
   margin-bottom: 2em;
+  color: black;
 }
 body #shell #mainWrapper main #bottomRow .bottom-finance #finance {
   background-color: #f9f9f9;
   padding: 2em;
   border-radius: 20px;
+  height: 71%;
 }
 body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop {
   display: flex;
@@ -300,6 +304,7 @@ body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop #i
 }
 body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop #income #monthlyIncome .month-income {
   font-size: 2vh;
+  color: black;
 }
 body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop #calendar img {
   background-color: white;
@@ -313,6 +318,9 @@ body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeChart 
   max-height: 100px;
   width: 100%;
   margin-top: 2em;
+}
+body #shell #mainWrapper main #bottomRow .bottomBox {
+  padding: 0 3em;
 }
 body #shell #mainWrapper main #bottomRow .bottomBox #performers {
   display: flex;
@@ -337,6 +345,24 @@ body #shell #mainWrapper main #bottomRow .bottomBox #performers .performerRow .p
   flex-direction: column;
   justify-content: space-between;
   margin-right: 3em;
+  gap: 0.5em;
+}
+body #shell #mainWrapper main #bottomRow .bottomBox #performers .performerRow .performerInfo span .fa-circle {
+  color: green;
+  font-size: 0.7em;
+  margin-left: 1em;
+}
+body #shell #mainWrapper main #bottomRow .bottomBox #performers .performerRow .performerRating .bad-rate {
+  background-color: #fdf4f0;
+  padding: 0.5em;
+  border-radius: 5px;
+  color: #d3a48e;
+}
+body #shell #mainWrapper main #bottomRow .bottomBox #performers .performerRow .performerRating .good-rate {
+  background-color: #eaf2f5;
+  padding: 0.5em;
+  border-radius: 5px;
+  color: #68a1b5;
 }
 body #shell #mainWrapper main #bottomRow .bottomBox #performers hr {
   border: none;
@@ -344,10 +370,51 @@ body #shell #mainWrapper main #bottomRow .bottomBox #performers hr {
   width: 100%;
   background-color: #e9e9e9;
 }
-
-.bigNumber {
+body #shell #mainWrapper main #bottomRow .bottomBox2 {
+  width: 37%;
+}
+body #shell #mainWrapper main #bottomRow .bottomBox2 .targeting {
+  height: 100%;
+}
+body #shell #mainWrapper main #bottomRow .bottomBox2 .targeting .map {
+  background-color: #fbfbfb;
+  border-radius: 25px;
+  width: 100%;
+  height: 90%;
+}
+body #shell #mainWrapper main #bottomRow .bottomBox2 .targeting #region {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.5em;
+}
+body #shell #mainWrapper main #bottomRow .bottomBox2 .targeting #region #poland {
+  display: flex;
+  padding: 1em;
+  margin-top: -27em;
+  margin-left: 30em;
+  background-color: white;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0 #e9e9e9;
+  width: 11em;
+}
+body #shell #mainWrapper main #bottomRow .bottomBox2 .targeting #region #poland #polandInfo {
+  margin-left: 1em;
+}
+body #shell #mainWrapper main #bottomRow .bottomBox2 .targeting #region #poland #polandInfo #polandNumbers {
+  font-family: "Oswald", sans-serif;
+}
+body #shell #mainWrapper main #bottomRow .bottomBox2 .targeting #region #poland #polandInfo #polandNumbers .rating {
+  color: green;
+  font-weight: bold;
+}
+body .bigNumber {
   font-size: 6em;
   font-family: "Lexend Mega", sans-serif;
   font-weight: 300;
   margin-top: -0.25em;
+}
+body b {
+  font-weight: bold;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
