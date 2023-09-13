@@ -21,32 +21,33 @@
     align-items: center;
 }
 
-%header{
+%column {
+    display: flex;
+    flex-direction: column;
+}
+
+%header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 %sidebar {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     padding: 0 0 2em;
     margin: 1em 1em 1em 0;
 }
 
-%navbar{
-    display: flex;
-    flex-direction: column;
+%navbar {
     justify-content: space-between;
 }
 
-%icons{
+%icons {
     width: 15px;
     margin: 1em;
 }
 
-%star{
+%star {
     width: 15px;
     background-color: white;
     padding: 1em;

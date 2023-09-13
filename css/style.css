@@ -18,6 +18,22 @@ body {
   align-items: center;
 }
 
+.performerInfo,
+#performers,
+#monthlyIncome,
+.valueWrapper,
+#popRate,
+#popularity,
+#visitsInfo,
+main,
+#mainWrapper,
+#sideNav,
+#logo,
+#sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
 body #shell #mainWrapper header, body #shell #mainWrapper main #topRow #popularity #popInsights {
   display: flex;
   justify-content: space-between;
@@ -25,8 +41,6 @@ body #shell #mainWrapper header, body #shell #mainWrapper main #topRow #populari
 }
 
 body #shell #sidebar {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   padding: 0 0 2em;
   margin: 1em 1em 1em 0;
@@ -41,8 +55,8 @@ body {
   background-color: #465e6c;
   font-size: 0.8vw;
   font-family: "Oswald", sans-serif;
-  font-weight: 200;
-  padding: 100px 70px;
+  height: 100vh;
+  padding: 0px 70px;
 }
 body #shell {
   display: flex;
@@ -54,16 +68,10 @@ body #shell #sidebar {
   align-items: center;
   color: white;
 }
-body #shell #sidebar #logo {
-  display: flex;
-  flex-direction: column;
-}
 body #shell #sidebar #logo img {
   width: 55px;
 }
 body #shell #sidebar #sideNav {
-  display: flex;
-  flex-direction: column;
   row-gap: 2em;
 }
 body #shell #sidebar #sideNav img#star-icon {
@@ -77,8 +85,6 @@ body #shell #sidebar #profile img {
 }
 body #shell #mainWrapper {
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 body #shell #mainWrapper header {
   padding: 1em 3em;
@@ -132,8 +138,6 @@ body #shell #mainWrapper header #members #memberImgs :last-child {
   background-color: lightblue;
 }
 body #shell #mainWrapper main {
-  display: flex;
-  flex-direction: column;
   background-color: #ffffff;
   height: 100%;
   justify-content: space-between;
@@ -168,8 +172,6 @@ body #shell #mainWrapper main #topRow #visits {
   display: flex;
 }
 body #shell #mainWrapper main #topRow #visits #visitsInfo {
-  display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
 }
 body #shell #mainWrapper main #topRow #visits #visitsInfo .visitsValues {
@@ -190,8 +192,6 @@ body #shell #mainWrapper main #topRow #visits #visitsInfo .visitsValues .visits-
   margin-top: 0.25em;
 }
 body #shell #mainWrapper main #topRow #visits #visitsInfo .visitsValues .valueWrapper {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   margin-top: 1.25em;
 }
@@ -218,8 +218,6 @@ body #shell #mainWrapper main #topRow #visits #statistic img {
 }
 body #shell #mainWrapper main #topRow #popularity {
   width: 40%;
-  display: flex;
-  flex-direction: column;
   background-color: #f7d3c1;
   height: 100%;
   border-radius: 15px;
@@ -231,10 +229,6 @@ body #shell #mainWrapper main #topRow #popularity #popTop {
   display: flex;
   align-items: center;
   gap: 4em;
-}
-body #shell #mainWrapper main #topRow #popularity #popTop #popRate {
-  display: flex;
-  flex-direction: column;
 }
 body #shell #mainWrapper main #topRow #popularity #popTop #popRate #popValue {
   display: flex;
@@ -298,8 +292,6 @@ body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop #i
   width: 25px;
 }
 body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop #income #monthlyIncome {
-  display: flex;
-  flex-direction: column;
   gap: 3px;
 }
 body #shell #mainWrapper main #bottomRow .bottom-finance #finance #financeTop #income #monthlyIncome .month-income {
@@ -323,8 +315,6 @@ body #shell #mainWrapper main #bottomRow .bottomBox {
   padding: 0 3em;
 }
 body #shell #mainWrapper main #bottomRow .bottomBox #performers {
-  display: flex;
-  flex-direction: column;
   padding: 1em 0;
   gap: 1em;
 }
@@ -341,8 +331,6 @@ body #shell #mainWrapper main #bottomRow .bottomBox #performers .performerRow {
   justify-content: space-between;
 }
 body #shell #mainWrapper main #bottomRow .bottomBox #performers .performerRow .performerInfo {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   margin-right: 3em;
   gap: 0.5em;
