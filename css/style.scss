@@ -3,21 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@200;300;400&family=Montserrat:wght@400;700&family=Oswald:wght@200;300;400&display=swap');
 
 body {
-    @extend %center;
-    background-color: vars.$background;
-    font-size: .8vw;
-    font-family: 'Oswald', sans-serif;
-    height: 100vh;
-    padding: 0px 70px;
+    @include partial.body;
 
     #shell {
-        @extend %shell;
+        @include partial.shell;
         display: flex;
         background: vars.$dashboard;
         font-size: .8em;
 
         #sidebar {
-            @extend %sidebar;
+            @include partial.sidebar;
             text-align: center;
             align-items: center;
             color: white;
@@ -27,11 +22,11 @@ body {
             }
 
             #sideNav {
-                // justify-self: space-between;
                 row-gap: 2em;
 
                 .shellIcon img {
-                    @extend %icons;
+                    width: 15px;
+                    margin: 1em;
                 }
 
                 img#star-icon {
@@ -54,15 +49,11 @@ body {
             width: 100%;
 
             header {
-                @extend %header;
-                padding: 1em 3em;
-                color: white;
+                @include partial.header;
 
                 #back {
-                    display: flex;
-                    justify-content: space-between;
+                    @include partial.centerSpace;
                     width: 5%;
-                    align-items: center;
                     gap: 1em;
 
                     .left-arrow {
@@ -88,7 +79,7 @@ body {
                 #members {
                     width: 25%;
                     display: flex;
-                    justify-content: end;
+                    justify-content: flex-end;
                     align-items: center;
 
                     .members-number {
@@ -101,7 +92,6 @@ body {
                             border-radius: 50%;
                             border: 2px solid #2A7B97;
                             margin-left: -8px;
-
                         }
 
                         :first-child {
@@ -122,12 +112,7 @@ body {
             }
 
             main {
-                @extend %main;
-                background-color: vars.$content;
-                height: 100%;
-                justify-content: space-between;
-                font-family: 'Montserrat', sans-serif;
-                row-gap: 30px;
+                @include partial.main;
 
                 .row {
                     width: 100%;
@@ -138,6 +123,7 @@ body {
 
                 #topRow,
                 #bottomRow {
+                    @extend .row;
                     display: flex;
                 }
 
@@ -145,23 +131,14 @@ body {
                     column-gap: 30px;
 
                     #visits {
-                        width: 66%;
-                        position: relative;
-                        height: 100%;
-                        background-image: url(../images/visits-img.JPG);
-                        background-position: center;
-                        background-size: cover;
-                        border-radius: 15px;
-                        box-sizing: border-box;
-                        padding: 2vw;
-                        color: white;
-                        display: flex;
+                        @include partial.visits;
 
                         #visitsInfo {
                             justify-content: space-evenly;
 
                             .visitsValues {
                                 display: flex;
+                                align-items: center;
 
                                 i {
                                     background-color: rgba(249, 249, 249, .2);
@@ -169,12 +146,6 @@ body {
                                     border-radius: 5px;
                                     margin-right: 1em;
                                 }
-
-                            }
-
-                            .visitsValues {
-                                display: flex;
-                                align-items: center;
 
                                 .visits-small-number {
                                     font-size: 1.5em;
@@ -185,26 +156,16 @@ body {
                                     justify-content: center;
                                     margin-top: 1.25em;
                                 }
+
+                            }
+
+                            &:is(span:first-child) {
+                                margin-top: -1.5em;
                             }
                         }
 
-                        #visitsInfo :is(span:first-child) {
-                            margin-top: -1.5em;
-                        }
-
                         #statistic {
-                            position: absolute;
-                            border-radius: 25px 0 15px 0;
-                            bottom: -10px;
-                            right: -10px;
-                            background-color: #2A7B97;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            color: white;
-                            padding: 2em;
-                            font-family: "Oswald", sans-serif;
-                            font-weight: bold;
+                            @include partial.statistic;
 
                             img {
                                 width: 10px;
@@ -214,34 +175,26 @@ body {
                     }
 
                     #popularity {
-                        width: 40%;
-                        background-color: vars.$popularity;
-                        height: 100%;
-                        border-radius: 15px;
-                        box-sizing: border-box;
-                        padding: 1.2em;
-                        gap: 2em;
+                        @include partial.popularity;
 
                         #popTop {
                             display: flex;
                             align-items: center;
                             gap: 4em;
 
-                            #popRate {
+                            #popValue {
+                                display: flex;
+                                align-items: flex-end;
+                                flex-direction: column-reverse;
 
-                                #popValue {
-                                    display: flex;
-                                    align-items: end;
-                                    flex-direction: column-reverse;
-
-                                    .small-number {
-                                        background-color: white;
-                                        padding: 2px;
-                                        border-radius: 10px;
-                                        margin: 1em -2em 0 1em;
-                                    }
+                                .small-number {
+                                    background-color: white;
+                                    padding: 2px;
+                                    border-radius: 10px;
+                                    margin: 1em -2em 0 1em;
                                 }
                             }
+
 
                             #popRate h1 {
                                 font-weight: bold;
@@ -254,20 +207,20 @@ body {
                         }
 
                         #popInsights {
-                            @extend %header;
+                            @include partial.header;
                             gap: 1em;
                             background-color: white;
                             border-radius: 7px;
                             padding: 1em;
+                            color: black;
 
                             .plane {
                                 width: 3em;
-
                             }
-                        }
 
-                        #popInsights p {
-                            font-size: 1em;
+                            p {
+                                font-size: 1em;
+                            }
                         }
                     }
                 }
@@ -282,59 +235,54 @@ body {
                         color: black;
                     }
 
-                    .bottom-finance {
-                        #finance {
-                            background-color: #f9f9f9;
-                            padding: 2em;
-                            border-radius: 20px;
-                            height: 71%;
+                    #finance {
+                        background-color: #f9f9f9;
+                        padding: 2em;
+                        border-radius: 20px;
+                        height: 71%;
 
-                            #financeTop {
+                        #financeTop {
+                            @include partial.centerSpace;
+                            gap: 4em;
+
+                            #income {
                                 display: flex;
-                                justify-content: space-between;
-                                gap: 4em;
-                                align-items: center;
 
-                                #income {
-                                    display: flex;
-
-                                    #incomeIcon img {
-                                        background-color: #2A7B97;
-                                        padding: .3em;
-                                        border-radius: 7px;
-                                        margin-right: 1em;
-                                        width: 25px;
-                                    }
-
-                                    #monthlyIncome {
-                                        gap: 3px;
-
-                                        .month-income {
-                                            font-size: 2vh;
-                                            color: black;
-                                        }
-                                    }
-
-                                }
-
-                                #calendar img {
-                                    background-color: white;
-                                    padding: .8em;
+                                #incomeIcon img {
+                                    background-color: #2A7B97;
+                                    padding: .3em;
                                     border-radius: 7px;
                                     margin-right: 1em;
-                                    width: 15px;
-                                    box-shadow: 0 0 3px 0 #e9e9e9;
+                                    width: 25px;
                                 }
+
+                                #monthlyIncome {
+                                    gap: 3px;
+
+                                    .month-income {
+                                        font-size: 2vh;
+                                        color: black;
+                                    }
+                                }
+
                             }
 
-                            #financeChart {
-                                img {
-                                    max-height: 100px;
-                                    width: 100%;
-                                    margin-top: 2em;
-                                }
+                            #calendar img {
+                                background-color: white;
+                                padding: .8em;
+                                border-radius: 7px;
+                                margin-right: 1em;
+                                width: 15px;
+                                box-shadow: 0 0 3px 0 #e9e9e9;
                             }
+                        }
 
+                        #financeChart {
+                            img {
+                                max-height: 100px;
+                                width: 100%;
+                                margin-top: 2em;
+                            }
                         }
 
                     }
@@ -354,44 +302,28 @@ body {
                             }
 
                             .performerRow {
-                                display: flex;
+                                @include partial.centerSpace;
                                 gap: 1em;
-                                align-items: center;
-                                justify-content: space-between;
 
                                 .performerInfo {
                                     justify-content: space-between;
                                     margin-right: 3em;
                                     gap: .5em;
 
-                                    span {
-                                        .fa-circle {
-                                            color: green;
-                                            font-size: .7em;
-                                            margin-left: 1em;
-                                        }
-
-                                    }
-
-
-                                }
-
-                                .performerRating {
-                                    .bad-rate {
-                                        background-color: #fdf4f0;
-                                        padding: .5em;
-                                        border-radius: 5px;
-                                        color: #d3a48e;
-                                    }
-
-                                    .good-rate {
-                                        background-color: #eaf2f5;
-                                        padding: .5em;
-                                        border-radius: 5px;
-                                        color: #68a1b5;
+                                    .fa-circle {
+                                        color: green;
+                                        font-size: .7em;
+                                        margin-left: 1em;
                                     }
                                 }
 
+                                .bad-rate {
+                                    @include partial.rate(#fdf4f0, #d3a48e);
+                                }
+
+                                .good-rate {
+                                    @include partial.rate(#eaf2f5, #68a1b5);
+                                }
                             }
 
                             hr {
@@ -422,21 +354,13 @@ body {
                                 font-size: .5em;
 
                                 #poland {
-                                    display: flex;
-                                    padding: 1em;
-                                    margin-top: -27em;
-                                    margin-left: 30em;
-                                    background-color: white;
-                                    position: relative;
-                                    border-radius: 5px;
-                                    box-shadow: 0 0 3px 0 #e9e9e9;
-                                    width: 11em;
+                                    @include partial.poland;
 
                                     #polandInfo {
                                         margin-left: 1em;
 
                                         #polandNumbers {
-                                            font-family: "Oswald", sans-serif;
+                                            font-family: vars.$bodyFont;
 
                                             .rating {
                                                 color: green;
@@ -455,7 +379,7 @@ body {
 
     .bigNumber {
         font-size: 6em;
-        font-family: 'Lexend Mega', sans-serif;
+        font-family: vars.$bigNumber;
         font-weight: 300;
         margin-top: -.25em;
     }
@@ -464,7 +388,6 @@ body {
         font-weight: bold;
         color: black;
     }
-
 }
 
 .performerInfo,
@@ -479,5 +402,5 @@ main,
 #sideNav,
 #logo,
 #sidebar {
-    @extend %column;
+    @include partial.column;
 }

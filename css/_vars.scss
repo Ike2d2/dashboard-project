@@ -1,6 +1,6 @@
 //===CONTAINER-COLORS===
 $background: #465e6c;
-$dashboard: linear-gradient(to bottom, rgba(50,137,160,.25), rgba(255, 255, 255, 0.25));
+$dashboard: linear-gradient(to bottom, rgba(50, 137, 160, .25), rgba(255, 255, 255, 0.25));
 $content: #ffffff;
 
 //===VISITS-FOR-TODAY===
@@ -18,3 +18,11 @@ $finance: #f9f9f9;
 //===TOP-PERFORMERS===
 $low-score: #89b5c0;
 $high-sore: #eaf2f5;
+
+//===FONTS===
+$bigNumber: 'Lexend Mega',
+    sans-serif;
+$mainFont: 'Montserrat',
+    sans-serif;
+$bodyFont: 'Oswald',
+    sans-serif;
